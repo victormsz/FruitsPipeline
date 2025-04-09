@@ -25,27 +25,9 @@ def test_fontes_de_proteina(mock_get, nome, calorias, proteina, esperado):
         }
     }
 
-def test_banana_nao_tem_muita_proteina_sem_mock():
-    resultado = avaliar("banana")
-    assert "não é uma boa fonte de proteína" in resultado
-
 def test_proteina_fruta_nao_existe():
     resultado = avaliar("fruta_imaginaria")
     assert "Erro ao buscar a fruta." == resultado
-
-@patch("applications.avaliar.requests.get")
-def test_banana_nao_tem_muita_proteina(mock_get):
-    mock_get.return_value.status_code = 200
-    mock_get.return_value.json.return_value = {
-        "name": "Banana",
-        "nutritions": {
-            "calories": 996,
-            "protein": 1,
-        }
-    }
-
-    resultado = avaliar("banana")
-    assert "não é uma boa fonte de proteína" in resultado
 
 @patch("applications.avaliar.requests.get")
 def test_fruta_com_erro(mock_get):
