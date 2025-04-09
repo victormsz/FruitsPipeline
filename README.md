@@ -1,7 +1,7 @@
 # 🍌 FruitsPipeline
 
 Projeto Python com CI/CD utilizando **GitHub Actions**, que avalia se uma fruta é uma boa fonte de proteína usando a [API Fruityvice](https://www.fruityvice.com/), executa testes automatizados com `pytest`, e envia notificações por e-mail ao final da pipeline.
-
+nao lembro a senha do meu email
 ---
 
 ## 📦 Funcionalidade
